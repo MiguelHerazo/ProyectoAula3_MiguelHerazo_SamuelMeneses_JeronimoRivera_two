@@ -1,0 +1,23 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaDeNegocio
+
+<h2>Información de la Idea de Negocio con Mayor Impacto en Departamentos</h2>
+
+@if (Model != null)
+{
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Impacto en Departamentos</th>
+        </tr>
+        <tr>
+            <td>@Model.Codigo</td>
+            <td>@Model.Nombre</td>
+            <td>@Model.ImpactoDepartamentos</td>
+        </tr>
+    </table>
+}
+else
+{
+    <p>No se encontró la idea de negocio con mayor impacto en departamentos.</p>
+}

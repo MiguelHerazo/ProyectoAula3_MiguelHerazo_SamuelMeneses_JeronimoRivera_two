@@ -1,0 +1,38 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IntegranteDeEquipo
+
+<h2>Eliminar Integrante de Equipo</h2>
+
+<div>
+    <h4>¿Estás seguro de que quieres eliminar este Integrante de Equipo?</h4>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Departamento)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("Delete", "IntegranteDeEquipo", new { id = Model.Codigo }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

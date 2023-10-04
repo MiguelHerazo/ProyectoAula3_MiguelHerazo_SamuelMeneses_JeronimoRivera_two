@@ -1,0 +1,32 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.Departamento
+
+<h2>Eliminar Departamento</h2>
+
+<p>¿Seguro que deseas eliminar el siguiente departamento?</p>
+<dl class="dl-horizontal">
+    <dt>
+        Código:
+    </dt>
+
+    <dd>
+        @Model.Codigo
+    </dd>
+
+    <dt>
+        Nombre:
+    </dt>
+
+    <dd>
+        @Model.Nombre
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        @Html.ActionLink("Cancelar", "Index")
+    </div>
+}

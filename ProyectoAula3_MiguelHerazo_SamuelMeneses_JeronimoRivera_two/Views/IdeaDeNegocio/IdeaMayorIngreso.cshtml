@@ -1,0 +1,23 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaDeNegocio
+
+<h2>Información de la Idea de Negocio con Mayor Total de Ingresos en los Primeros 3 Años</h2>
+
+@if (Model != null)
+{
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Total de Ingresos en 3 Años</th>
+        </tr>
+        <tr>
+            <td>@Model.Codigo</td>
+            <td>@Model.Nombre</td>
+            <td>@Model.Ingresos3Anios</td>
+        </tr>
+    </table>
+}
+else
+{
+    <p>No se encontró la idea de negocio con mayor total de ingresos en 3 años.</p>
+}

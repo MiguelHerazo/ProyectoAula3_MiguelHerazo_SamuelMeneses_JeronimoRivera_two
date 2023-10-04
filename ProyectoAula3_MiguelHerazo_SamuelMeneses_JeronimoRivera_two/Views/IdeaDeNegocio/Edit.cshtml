@@ -1,0 +1,34 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaDeNegocio
+
+@using (Html.BeginForm("Edit", "IdeaDeNegocio", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Codigo)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre)
+        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Impacto)
+        @Html.TextAreaFor(model => model.Impacto, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ValorInversion)
+        @Html.TextBoxFor(model => model.ValorInversion, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Ingresos3Anios)
+        @Html.TextBoxFor(model => model.Ingresos3Anios, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Herramientas4RI)
+        @Html.TextBoxFor(model => model.Herramientas4RI, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+}

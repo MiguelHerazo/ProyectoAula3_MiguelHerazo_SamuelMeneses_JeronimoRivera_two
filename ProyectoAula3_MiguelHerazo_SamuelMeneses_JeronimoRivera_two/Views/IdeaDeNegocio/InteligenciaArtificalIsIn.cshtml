@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Cantidad de Ideas con Inteligencia Artificial";
+}
+
+<h2>Cantidad de Ideas de Negocio con Inteligencia Artificial</h2>
+
+@if (ViewBag.CantidadIdeas != null)
+{
+    <p>El número de ideas de negocio que involucran "Inteligencia Artificial" es: @ViewBag.CantidadIdeas</p>
+}
+else
+{
+    <p>No se pudo obtener la cantidad de ideas de negocio con "Inteligencia Artificial".</p>
+}

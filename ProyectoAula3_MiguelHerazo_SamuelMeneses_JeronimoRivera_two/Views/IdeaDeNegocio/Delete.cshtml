@@ -1,0 +1,57 @@
+﻿@model ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaDeNegocio
+
+<h2>Eliminar Idea de Negocio</h2>
+
+<p>¿Estás seguro de que deseas eliminar la siguiente idea de negocio?</p>
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Nombre)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Nombre)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Impacto)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Impacto)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ValorInversion)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ValorInversion)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Ingresos3Anios)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Ingresos3Anios)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Herramientas4RI)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Herramientas4RI)
+    </dd>
+</dl>
+
+@using (Html.BeginForm("Delete", "IdeaDeNegocio", new { id = Model.Codigo }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver a la Lista", "Index")
+</div>

@@ -1,0 +1,53 @@
+﻿@model List<ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera.Models.IdeaDeNegocio>
+
+<h2>Lista de Ideas de Negocio</h2>
+
+<p>
+    @Html.ActionLink("Crear Nueva Idea de Negocio", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Impacto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorInversion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingresos3Anios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Herramientas4RI)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var idea in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => idea.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => idea.Impacto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => idea.ValorInversion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => idea.Ingresos3Anios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => idea.Herramientas4RI)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = idea.Codigo }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = idea.Codigo })
+            </td>
+        </tr>
+    }
+</table>
