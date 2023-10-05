@@ -16,9 +16,6 @@ namespace ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configurar servicios aquí
-            // Por ejemplo:
-            // services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -29,18 +26,7 @@ namespace ProyectoAula3_MiguelHerazo_SamuelMeneses_JeronimoRivera
             }
             else
             {
-                // Configuración de manejo de errores en producción
             }
-
-            // Configurar middleware y rutas aquí
-            // Por ejemplo:
-            // app.UseRouting();
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllerRoute(
-            //         name: "default",
-            //         pattern: "{controller=Home}/{action=Index}/{id?}");
-            // });
         }
     }
 }
